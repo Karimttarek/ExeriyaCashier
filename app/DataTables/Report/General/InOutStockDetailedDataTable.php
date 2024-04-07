@@ -209,7 +209,7 @@ class InOutStockDetailedDataTable extends DataTable
                 'data' => 'balance',
                 'title' => __('app.BALANCE')
             ]
-            
+
         ];
     }
 

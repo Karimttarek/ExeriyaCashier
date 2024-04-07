@@ -24,12 +24,12 @@ class UpdatePosRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'invoice_number' => ['max:255',
-                Rule::unique('invoicehead' ,'document_uuid')->where(function ($query) {
-                    return $query->where('invoice_type', str_contains(url()->current(), 'return') ? 6  : 5);
-                })
-                ->ignore($this->uuid, 'uuid')
-            ],
+            // 'invoice_number' => ['max:255',
+            //     Rule::unique('invoicehead' ,'document_uuid')->where(function ($query) {
+            //         return $query->where('invoice_type', str_contains(url()->current(), 'return') ? 6  : 5);
+            //     })
+            //     ->ignore($this->uuid, 'uuid')
+            // ],
             // 'invoice_date' => auth()->user()->role != 3 ? ['required'] : '',
             'items_count' => ['numeric','min:1'],
         ];

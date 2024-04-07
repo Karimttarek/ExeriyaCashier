@@ -173,10 +173,6 @@ $(document).on('click' , '#apply' , function (){
         shake($('#err-list'));
 
     }
-     else if(currentStock <= 0 ||  parseFloat($('#product-qty').val()) > currentStock){
-         $('#err-list').text('كمية غير متاحة');
-         shake($('#err-list'));
-     }
     else{
         // var count = $('.tr-item tr').length +1 ;
         var count = 0;
@@ -352,5 +348,4 @@ function resetStock(){
     $('#currentStock').text(0);
     $('.stock').css('color','black');
     $('#product-qty').attr('readonly' ,false);
-
 }

@@ -44,9 +44,8 @@ class InOutStockExport extends DataTablesCollectionExport implements FromCollect
     public function columnFormats(): array
     {
         return [
-            'D' => NumberFormat::FORMAT_NUMBER,
-            'E' => NumberFormat::FORMAT_NUMBER,
-            'F' => NumberFormat::FORMAT_NUMBER,
+            'B' => NumberFormat::FORMAT_NUMBER,
+
         ];
     }
 

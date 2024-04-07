@@ -159,7 +159,7 @@
     @include('modal.POSItem')
 
     @push('script')
-    <script src="{{URL::asset('js/pos.js')}}"></script>
+    <script src="{{URL::asset('js/posreturn.js')}}"></script>
     @endpush
 
 </x-pos-layout>
