@@ -350,7 +350,7 @@ class ProductController extends Controller
                         ->leftJoin('invoicehead' , 'invoicehead.uuid' ,'=','invoicedetails.uuid')
                         ->leftJoin('products' , 'invoicedetails.item_uuid' ,'=','products.uuid')
                         ->rightJoin('manufacturs' , 'manufacturs.parent_uuid' , '=' , 'invoicedetails.item_uuid')
-                        ->where('invoicedetails.item_code' ,$product[0]->item_code)
+                        ->where('item',$request->name)
                         ->orderBy('invoicehead.invoice_date')->get();
         $data = [
             'product' => $product,
